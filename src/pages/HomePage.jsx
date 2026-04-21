@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import bgVideo from "../../assets/video.mp4";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const rightSideRef = useRef(null);
@@ -116,17 +115,6 @@ const HomePage = () => {
 
   return (
     <div className="body-layout">
-      <div className="home-bg-video" aria-hidden="true">
-        <video
-          className="home-bg-video__media"
-          src={bgVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        <div className="home-bg-video__overlay" />
-      </div>
       <aside className="left-side" ref={leftSideRef}>
         <div className="left-side-d1">
           <h1>Abdul Moeez</h1>
@@ -208,16 +196,21 @@ const HomePage = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Fiverr"
+            className="left-side-d3-link--boxed"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+              viewBox="0 0 64 64"
+              fill="none"
               className="h-6 w-6"
               aria-hidden="true"
             >
-              <path d="M23.004 15.588a.995.995 0 1 1-1.99 0v-1.984a2.995 2.995 0 0 0-2.994-2.994h-1.99a2.995 2.995 0 0 0-2.994 2.994v6.974a2.995 2.995 0 0 0 2.994 2.994h5.98a2.995 2.995 0 0 0 2.994-2.994V15.588" />
-              <path d="M8.756 9.92h1.99V7.973h3.015V5.996H6.741v9.992h5.02V13.02H8.756V9.92z" />
+              <rect width="64" height="64" rx="14" fill="none" />
+              <circle cx="41.5" cy="20.5" r="3.5" fill="#B8C7E6" />
+              <path
+                d="M23 46V31H19V26H23V24.5C23 18.7 26.7 15 32.9 15H38V20H33.8C30.8 20 29 21.8 29 24.8V26H37V31H29V46H23Z"
+                fill="#B8C7E6"
+              />
             </svg>
           </a>
           <a
@@ -225,15 +218,25 @@ const HomePage = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Upwork"
+            className="left-side-d3-link--boxed"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+              viewBox="0 0 64 64"
+              fill="none"
               className="h-6 w-6"
               aria-hidden="true"
             >
-              <path d="M18.561 13.158c-1.102 0-2.116-.29-2.904-.873v6.397c0 .173-.142.315-.315.315H15.21a.315.315 0 01-.315-.315v-9.08a.315.315 0 01.315-.315h.132c.173 0 .315.142.315.315v.456c.788-.583 1.802-.873 2.904-.873 2.362 0 4.277 1.916 4.277 4.277S20.923 13.158 18.56 13.158zm0-6.844c-1.445 0-2.613 1.168-2.613 2.613s1.168 2.613 2.613 2.613 2.613-1.168 2.613-2.613-1.168-2.613-2.613-2.613zm-8.561 6.844c-2.362 0-4.277-1.916-4.277-4.277S7.638 4.6 10 4.6c1.102 0 2.116.29 2.904.873v-.456a.315.315 0 01.315-.315h.132a.315.315 0 01.315.315v9.08a.315.315 0 01-.315.315h-.132a.315.315 0 01-.315-.315v-.456c-.788.583-1.802.873-2.904.873zm0-6.844c-1.445 0-2.613 1.168-2.613 2.613s1.168 2.613 2.613 2.613 2.613-1.168 2.613-2.613-1.168-2.613-2.613-2.613z" />
+              <rect width="64" height="64" rx="14" fill="none" />
+              <path
+                d="M18 24V36C18 42 21.5 46 27 46C32.5 46 36 42 36 36V24H31V36C31 39.2 29.4 41 27 41C24.6 41 23 39.2 23 36V24H18Z"
+                fill="#B8C7E6"
+              />
+              <path
+                d="M38 24V28H42V36C42 39 43.8 41 46.5 41C49.2 41 51 39 51 36C51 33 49.2 31 46.5 31C45.4 31 44.4 31.3 43.6 31.9V27.4C44.5 26.9 45.5 26.6 46.7 26.6C52 26.6 56 30.6 56 36C56 41.4 52 45.4 46.7 45.4C41.4 45.4 37 41.5 37 36V24H38Z"
+                fill="#B8C7E6"
+              />
+              <circle cx="47" cy="22" r="3" fill="#B8C7E6" />
             </svg>
           </a>
         </div>
@@ -538,13 +541,6 @@ const HomePage = () => {
               </svg>
             </p>
           </button>
-        </section>
-
-        <section className="Other-Shit">
-          <h1>Imran is Daddy 🖕</h1>
-        </section>
-        <section className="Other-Shit2">
-          <h1></h1>
         </section>
       </main>
     </div>
